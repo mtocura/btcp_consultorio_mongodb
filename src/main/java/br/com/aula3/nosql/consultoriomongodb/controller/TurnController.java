@@ -39,14 +39,14 @@ public class TurnController {
     return ResponseEntity.ok(turnDTOS);
   }
 
-  @GetMapping("/{status}")
+  @GetMapping("/status/{status}")
   public ResponseEntity<List<TurnDTO>> findByStatus(@PathVariable String status) {
     List<TurnDTO> turnDTOS = TurnConverter.turnEntityToDTO(this.turnService.findByStatus(status));
 
     return ResponseEntity.ok(turnDTOS);
   }
 
-  @GetMapping("/{dentistLastName}")
+  @GetMapping("/dentist/{dentistLastName}")
   public ResponseEntity<List<TurnDTO>> findByDentist(@PathVariable String dentistLastName) {
     List<TurnDTO> turnDTOS = TurnConverter.turnEntityToDTO(this.turnService.findByDentistLastName(dentistLastName));
 
