@@ -9,13 +9,8 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TurnForm {
-  @Field("patient")
   private PatientForm patient;
-
-  @Field("doctor")
-  private DentistForm dentist;
-
+  private DentistForm doctor;
   private String date;
-
   private String status;
 }
