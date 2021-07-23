@@ -37,10 +37,10 @@ public class TurnService {
     return this.turnRepository.findTurnsByDentist_LastName(dentistLastName);
   }
 
-  public void save(Turn turn) {
+  public Turn save(Turn turn) {
     this.patientService.save(turn.getPatient());
     this.dentistService.save(turn.getDentist());
-    this.turnRepository.save(turn);
+    return this.turnRepository.save(turn);
   }
 
   public void update(Turn turn, String id) {
