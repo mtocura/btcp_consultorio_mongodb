@@ -1,7 +1,5 @@
 package br.com.aula3.nosql.consultoriomongodb.form;
 
-import br.com.aula3.nosql.consultoriomongodb.domain.Dentist;
-import br.com.aula3.nosql.consultoriomongodb.domain.Patient;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
