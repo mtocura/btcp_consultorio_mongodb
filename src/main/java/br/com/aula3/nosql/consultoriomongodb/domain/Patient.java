@@ -1,9 +1,13 @@
 package br.com.aula3.nosql.consultoriomongodb.domain;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collation = "paciente")
+@Data
+@NoArgsConstructor
 public class Patient {
 
   @Id
