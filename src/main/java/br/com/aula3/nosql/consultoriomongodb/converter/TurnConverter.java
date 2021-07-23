@@ -12,7 +12,12 @@ public class TurnConverter {
   private static ModelMapper mapper = new ModelMapper();
 
   public static Turn turnFormToEntity(TurnForm turnForm) {
-    return mapper.map(turnForm, Turn.class);
+    return new Turn(
+      PatientConverter.patientFormToEntity(turnForm.getPatient()),
+      DentistConverter.dentistFormToEntity(turnForm.getDoctor()),
+      turnForm.getDate(),
+      turnForm.getStatus()
+    );
   }
 
   public static List<Turn> turnFormToEntity(List<TurnForm> turnForms) {
@@ -26,7 +31,13 @@ public class TurnConverter {
   }
 
   public static TurnDTO turnEntityToDTO(Turn turn) {
-    return mapper.map(turn, TurnDTO.class);
+    return new TurnDTO(
+            turn.getId(),
+            PatientConverter.patientEntityToDTO(turn.getPatient()),
+            DentistConverter.dentistEntityToDTO(turn.getDentist()),
+            turn.getDate(),
+            turn.getStatus()
+    );
   }
 
   public static List<TurnDTO> turnEntityToDTO(List<Turn> turns) {
