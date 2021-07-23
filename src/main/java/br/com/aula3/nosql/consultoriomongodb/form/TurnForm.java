@@ -12,10 +12,10 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @AllArgsConstructor
 public class TurnForm {
   @Field("patient")
-  private Patient patient;
+  private PatientForm patient;
 
   @Field("doctor")
-  private Dentist dentist;
+  private DentistForm dentist;
 
   private String date;
 
