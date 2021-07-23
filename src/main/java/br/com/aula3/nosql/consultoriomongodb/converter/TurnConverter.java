@@ -15,7 +15,7 @@ public class TurnConverter {
     return mapper.map(turnForm, Turn.class);
   }
 
-  public List<Turn> turnFormToEntity(List<TurnForm> turnForms) {
+  public static List<Turn> turnFormToEntity(List<TurnForm> turnForms) {
     List<Turn> turns = new ArrayList<>();
 
     for (TurnForm turnForm : turnForms) {
@@ -29,7 +29,7 @@ public class TurnConverter {
     return mapper.map(turn, TurnDTO.class);
   }
 
-  public List<TurnDTO> turnEntityToDTO(List<Turn> turns) {
+  public static List<TurnDTO> turnEntityToDTO(List<Turn> turns) {
     List<TurnDTO> turnDTOS = new ArrayList<>();
 
     for (Turn turn : turns) {
