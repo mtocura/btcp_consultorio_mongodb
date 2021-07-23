@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "paciente")
+@Document(collection = "patient")
 @Data
 @NoArgsConstructor
 public class Patient {
